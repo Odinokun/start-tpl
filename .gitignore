@@ -1,0 +1,50 @@
+# Numerous always-ignore extensions
+*.bak
+*.diff
+*.err
+*.exe
+*.log
+*.orig
+*.rej
+*.sass-cache
+*.swo
+*.swp
+*.vi
+*~
+
+# OS or Editor folders
+*.sublime-grunt.cache
+*.sublime-project
+*.sublime-workspace
+._*
+.cache
+.DS_Store
+.project
+.settings
+.tmproj
+Thumbs.db
+
+# Folders to ignore
+.CVS
+.git
+.hg
+.idea
+.svn
+bower_components
+
+# Node.JS
+node_modules
+npm-debug.log
+
+### My folders ###
+_temp/
+_template/
+node_modules/
+bower/
+bower_components/
+dist
+build
+
+### My files ###
+*.zip
+*.rar
