@@ -1,0 +1,194 @@
+.burger__menu {
+  font-family: $font, sans-serif;
+  font-size: 22px;
+  position: absolute;
+  top: 4px;
+  left: 50px;
+  letter-spacing: 1px;
+  color: #fafafa;
+}
+.burger {
+  width: 130px;
+  height: 40px;
+}
+.burger input {
+  display: none;
+}
+.burger label {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: transparent;
+}
+/* Exit Icon */
+.burger label:before,
+.burger input:checked + label:before {
+  position: absolute;
+  top: 50%;
+  width: 35px;
+  height: 3px;
+  margin-top: -1px;
+  content: '';
+  border-radius: 2px;
+  background: #fafafa;
+}
+.burger label:before {
+  animation: animationOneReverse 1s ease forwards;
+}
+@keyframes animationOneReverse {
+  0% {
+    transform: rotate(315deg);
+  }
+  25% {
+    transform: rotate(360deg);
+  }
+  50%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.burger input:checked + label:before {
+  animation: animationOne 1s ease forwards;
+}
+@keyframes animationOne {
+  0%,
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(315deg);
+  }
+}
+.burger label:after,
+.burger input:checked + label:after {
+  position: absolute;
+  top: 50%;
+  width: 35px;
+  height: 3px;
+  margin-top: -1px;
+  content: '';
+  border-radius: 2px;
+  background: #fafafa;
+}
+.burger label:after {
+  animation: animationTwoReverse 1s ease forwards;
+}
+@keyframes animationTwoReverse {
+  0% {
+    transform: rotate(405deg);
+  }
+  25% {
+    transform: rotate(450deg);
+  }
+  50%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.burger input:checked + label:after {
+  animation: animationTwo 1s ease forwards;
+}
+@keyframes animationTwo {
+  0%,
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(450deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+/* Burger Icon */
+.burger label .burger__icon:before {
+  position: absolute;
+  top: 7px;
+  width: 35px;
+  height: 3px;
+  content: '';
+  animation: animationBurgerTopReverse 1s ease forwards;
+  border-radius: 2px;
+  background: #fafafa;
+}
+@keyframes animationBurgerTopReverse {
+  0%,
+  50% {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+  51% {
+    transform: translateY(12px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.burger input:checked + label .burger__icon:before {
+  animation: animationBurgerTop 1s ease forwards;
+}
+@keyframes animationBurgerTop {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(12px);
+    opacity: 1;
+  }
+  51%,
+  100% {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+}
+.burger label .burger__icon:after {
+  position: absolute;
+  bottom: 6px;
+  width: 35px;
+  height: 3px;
+  content: '';
+  animation: animationBurgerBottomReverse 1s ease forwards;
+  border-radius: 2px;
+  background: #fafafa;
+}
+@keyframes animationBurgerBottomReverse {
+  0%,
+  50% {
+    transform: translateY(-12px);
+    opacity: 0;
+  }
+  51% {
+    transform: translateY(-12px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.burger input:checked + label .burger__icon:after {
+  animation: animationBurgerBottom 1s ease forwards;
+}
+@keyframes animationBurgerBottom {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-12px);
+    opacity: 1;
+  }
+  51%,
+  100% {
+    transform: translateY(-12px);
+    opacity: 0;
+  }
+}

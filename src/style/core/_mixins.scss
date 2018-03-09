@@ -1,0 +1,56 @@
+@mixin clearfix {
+  &::before,
+  &::after {
+    display: table;
+    content: '';
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+// ===== responsive =====
+@mixin max($width) {
+  @media screen and (max-width: $width + 'px') {
+    @content;
+  }
+}
+@mixin min($width) {
+  @media screen and (min-width: $width + 'px') {
+    @content;
+  }
+}
+
+// ===== ol style =====
+@mixin counter($var) {
+  counter-reset: $var;
+  & > li::before {
+    content: counter($var) ') ';
+    counter-increment: $var;
+  }
+}
+
+// ===== placeholder style =====
+@mixin placeholder-color($color) {
+  opacity: 1;
+  /* Chrome/Opera/Safari */
+  &::-webkit-input-placeholder {
+    opacity: 1;
+    color: $color;
+  }
+  /* Firefox 19+ */
+  &::-moz-placeholder {
+    opacity: 1;
+    color: $color;
+  }
+  /* IE 10+ */
+  &:-ms-input-placeholder {
+    opacity: 1;
+    color: $color;
+  }
+  /* Firefox 18- */
+  &:-moz-placeholder {
+    opacity: 1;
+    color: $color;
+  }
+}

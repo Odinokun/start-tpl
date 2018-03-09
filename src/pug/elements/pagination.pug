@@ -1,0 +1,26 @@
+//begin pagination
+section.pagination
+  ul.pagination__list
+    li.pagination__item.pagination-arr__left
+      a.pagination__link(href='#')
+        svg
+          use(xlink:href="assets/img/sprite.svg#arrow")
+    li.pagination__item
+      a.pagination__link(href='#') 1
+    li.pagination__item
+      a.pagination__link.active(href='#') 2
+    li.pagination__item
+      a.pagination__link(href='#') 3
+    li.pagination__item
+      a.pagination__link.inactive(href='#') ...
+    li.pagination__item
+      a.pagination__link(href='#') 7
+    li.pagination__item.active
+      a.pagination__link(href='#') 8
+    li.pagination__item
+      a.pagination__link(href='#') 9
+    li.pagination__item.pagination-arr__right
+      a.pagination__link(href='#')
+        svg
+          use(xlink:href="assets/img/sprite.svg#arrow")
+//end pagination

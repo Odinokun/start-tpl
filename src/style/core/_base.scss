@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: $font;
+  font-size: 16px;
+  line-height: 1.38;
+  color: $text;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
+body.no-scroll {
+  overflow: hidden;
+}
+body.fix {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+  margin: 0 0 10px 0;
+}
+h1 {
+  font-family: $font-bold;
+  font-size: 36px;
+}
+h2 {
+  font-family: $font-bold;
+  font-size: 32px;
+}
+h3 {
+  font-family: $font-bold;
+  font-size: 28px;
+}
+h4 {
+  font-family: $font-bold;
+  font-size: 24px;
+}
+h5 {
+  font-family: $font-bold;
+  font-size: 22px;
+}
+h6 {
+  font-family: $font-bold;
+  font-size: 20px;
+}
+p {
+  font-size: 16px;
+  strong {
+    font-family: $font-bold;
+  }
+}
+a {
+  transition: color .5s;
+  color: $highlight;
+  &:hover {
+    text-decoration: none;
+    color: $highlight-hov;
+  }
+}
+ol,
+ul {
+  li {
+    padding: 3px 0;
+  }
+}
+ul {
+  li {
+    // путь к кастомной картинке пункта ul
+    // list-style-image: url('../img/ul.png');
+  }
+}
+//кастомные пункты списка с цифрами
+ol {
+  // list-style: none;
+  // @include counter(li);
+  li::before {
+    // color: $brand;
+  }
+}
+input,
+textarea,
+select,
+button {
+  border-radius: 0 !important;
+  outline: none;
+}
+input {
+  padding: 3px 10px 5px 10px;
+  color: $text;
+  border: 1px solid $text;
+  &::placeholder {
+    @include placeholder-color($text);
+  }
+}
+textarea {
+  resize: none;
+}
+input.error,
+textarea.error {
+  border-color: #ed1b24 !important;
+  background: #fbd1d3 !important;
+}
+svg {
+  display: block;
+  overflow: visible;
+}
+//изменяем цвет выделения текста мышью
+::selection {
+  // background-color: $brand;
+  // color: $brand;
+  // text-shadow: none;
+}
+.main {
+  position: relative;
+  flex: 1 0 auto;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 30px;
+
+  @include max(768) {
+    padding: 10px 20px;
+  }
+  @include max(425) {
+    padding: 10px;
+  }
+}
+.header,
+.page-header,
+.footer {
+  flex: 0 0 auto;
+}

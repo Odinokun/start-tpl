@@ -1,0 +1,25 @@
+.popup__layer {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, .8);
+}
+.popup {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 300px;
+  padding: 50px 30px;
+  transform: translate(-50%, -50%);
+  background-color: #369;
+}
+.popup__form {
+  display: flex;
+  flex-direction: column;
+}
