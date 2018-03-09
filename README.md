@@ -1,12 +1,14 @@
-﻿# Front-end quick start template
+﻿# Front-end startup template
 
-## Используемые технологии:
+Author: <a href="http://odinokun.com" target="_blank">Odinokun</a>
+
+## Technologies:
 * Gulp 4.0
 * Pug(Jade)
 * Sass(Scss)
 * JS+jQuery
 
-## Для старта:
+## How to use:
 1. install node.js(8.9.4)
 2. clone this repo
 3. cd path/to/this repository
@@ -14,7 +16,7 @@
 5. npm i
 6. run "gulp" command to start
 
-## Структура шаблона:
+## Structure:
 * fonts
 * img
 * js
