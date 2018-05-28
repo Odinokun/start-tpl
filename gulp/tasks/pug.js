@@ -21,6 +21,7 @@ module.exports = function() {
         // brace_style: 'expand',
         indent_char: ' ',
         indent_size: 2}))
+      .pipe($.gp.cached('pug'))
       .pipe($.gulp.dest($.config.root));
   });
 
