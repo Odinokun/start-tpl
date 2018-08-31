@@ -131,10 +131,18 @@ svg {
   // color: $brand;
   // text-shadow: none;
 }
-.main {
-  position: relative;
-  flex: 1 0 auto;
+
+
+.main-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+.main {
+  flex-grow: 1;
+}
+
+
 .container {
   position: relative;
   width: 100%;
@@ -148,9 +156,4 @@ svg {
   @include max(425) {
     padding: 10px;
   }
-}
-.header,
-.page-header,
-.footer {
-  flex: 0 0 auto;
 }
