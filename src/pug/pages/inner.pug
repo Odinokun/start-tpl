@@ -1,15 +1,18 @@
 extends ../_template
 
-mixin test__item(bgImg, title)
+mixin test__item(bgImg, itemTitle)
   .services__item(style="height: 100px; width: 25%; border: 1px solid #693;text-align:center;display:inline-block;")
     .services__pic(style=`${bgImg}`)
     .services__icon
-    h3.services__title #{title}
+    h3.services__title #{itemTitle}
     a(href="#").services__link
 
 block variables
-  - var title = 'Inner'
+  - var title           = 'Inner'
   - var pageHeaderTitle = 'Внутренняя страница'
+  - var description     = 'Odinokun`s start template'
+  - var ogtitle         = 'Odinokun`s start template'
+  - var ogimage         = 'assets/img/social.jpg'
 
 block content
   include ../sections/header
