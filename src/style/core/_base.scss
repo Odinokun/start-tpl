@@ -20,16 +20,6 @@ body {
   flex-direction: column;
   min-width: 320px;
 }
-body.no-scroll {
-  overflow: hidden;
-}
-body.fix {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
 h1,
 h2,
 h3,
@@ -134,9 +124,14 @@ svg {
 
 
 .main-wrap {
+  height: 100%;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  &.no-scroll {
+
+  overflow: hidden;
+  }
 }
 .main {
   flex-grow: 1;
@@ -156,4 +151,20 @@ svg {
   @include max(425) {
     padding: 10px;
   }
+}
+
+// скрываем все слайды кроме первого
+// при отключенном JS
+// .slick-slide исправить на текущий класс
+.no-js .slick-slide:not(:first-child) {
+  display: none
+}
+
+// скрываем слайдер до его инициализации
+// .card-slider-lg__list исправить на текущий класс
+.card-slider-lg__list {
+  visibility: hidden;
+}
+.card-slider-lg__list.slick-initialized {
+  visibility: visible;
 }
