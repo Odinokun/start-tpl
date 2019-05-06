@@ -20,7 +20,7 @@
     "browser-sync": "^2.24.7",
     "browserify": "^15.2.0",
     "del": "^3.0.0",
-    "gulp": "git+https://git@github.com/gulpjs/gulp.git#4.0",
+    "gulp": "github:gulpjs/gulp#6d71a65",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-cached": "^1.1.1",
     "gulp-cheerio": "^0.6.3",
