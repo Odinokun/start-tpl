@@ -12,7 +12,7 @@ module.exports = function () {
       .pipe($.buffer())
 
       //минификация js
-      .pipe($.gp.uglify())
+      .pipe($.uglifyEs())
       .pipe($.gulp.dest($.config.root + '/assets/js'));
   });
 

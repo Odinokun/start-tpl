@@ -7,7 +7,7 @@ module.exports = function() {
       //конкатенация js
       .pipe($.gp.concat('foundation.js'))
       //минификация js
-      .pipe($.gp.uglify())
+      .pipe($.uglifyEs())
       .pipe($.gulp.dest($.config.root + '/assets/js'))
   })
 

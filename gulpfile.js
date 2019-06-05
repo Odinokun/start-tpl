@@ -15,6 +15,7 @@ global.$ = {
   browserify:   require('browserify'),
   buffer:       require('vinyl-buffer'),
   sourceStream: require('vinyl-source-stream'),
+  uglifyEs:     require('gulp-uglify-es').default,
   gp:           require('gulp-load-plugins')()
 };
 

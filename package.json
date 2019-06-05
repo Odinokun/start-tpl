@@ -16,6 +16,10 @@
     "url": "https://github.com/Odinokun/quick-start-tpl/issues"
   },
   "homepage": "https://github.com/Odinokun/quick-start-tpl#readme",
+  "browserslist": [
+    "last 2 versions",
+    ">1%"
+  ],
   "devDependencies": {
     "browser-sync": "^2.26.5",
     "browserify": "^16.2.3",
@@ -40,7 +44,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^2.2.0",
-    "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^1.0.4",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },
