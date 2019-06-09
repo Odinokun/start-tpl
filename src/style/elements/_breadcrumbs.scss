@@ -3,13 +3,8 @@
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  .breadcrumbs__item:last-child {
-    .breadcrumbs__link {
-      text-decoration: none;
-      pointer-events: none;
-    }
-  }
 }
+
 .breadcrumbs__item {
   position: relative;
   list-style: none;
@@ -19,11 +14,16 @@
     content: '/';
   }
   &:last-child {
+    .breadcrumbs__link {
+      text-decoration: none;
+      pointer-events: none;
+    }
     &::after {
       display: none;
     }
   }
 }
+
 .breadcrumbs__link {
   font-size: 12px;
   white-space: nowrap;
