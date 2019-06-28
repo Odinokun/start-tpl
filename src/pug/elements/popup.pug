@@ -1,10 +1,17 @@
 //begin popup
-button.popup-open popup open
 .popup__layer
-  .popup
-    h3.popup__title Popup title
+.popup
+  .popup__close
+    +svg('close')
+  .popup__header
+    h2.popup__title Write Review
+  .popup__body
+    // begin schedule-item__form
     form.popup__form
-      input.popup__input(type="text" placeholder="Ваше имя")
-      input.popup__input(type="text" placeholder="Ваше имя")
-      button.popup__btn Кнопуля
+        input(name='name' placeholder='Your Name').popup__form-input.input
+        input(name='email' placeholder='Email').popup__form-input.input
+        textarea(placeholder='Your review').popup__form-textarea.textarea
+        .popup__form-submit.btn
+          input(type='submit' value='send')
+    // begin schedule-item__form
 //end popup
