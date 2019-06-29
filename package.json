@@ -18,7 +18,9 @@
   "homepage": "https://github.com/Odinokun/quick-start-tpl#readme",
   "browserslist": [
     "last 2 versions",
-    ">1%"
+    ">1%",
+    "IE 10",
+    "IE 11"
   ],
   "devDependencies": {
     "browser-sync": "^2.26.5",
