@@ -136,6 +136,24 @@ svg {
   overflow: visible;
 }
 
+// подсвечиваем картинки без заполненного alt
+img[alt=''],
+img[alt=""]{
+  outline: 5px solid darkorange;
+}
+
+// подсвечиваем теги без необходимых атрибутов
+img:not([alt]),
+input[type=submit]:not([value]) {
+  outline: 5px solid tomato;
+}
+
+// тревога, если первый child внутри списка не li и прочие похожие примеры
+ul > *:not(li),
+ol > *:not(li) {
+  outline: 5px solid tomato;
+}
+
 //изменяем цвет выделения текста мышью
 ::selection {
   // background-color: $brand;
