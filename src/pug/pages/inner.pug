@@ -1,7 +1,7 @@
 extends ../_template
 
 mixin test__item(bgImg, itemTitle)
-  .services__item(style="height: 200px; width: 25%; border: 1px solid #693;text-align:center;display:inline-block;")
+  .services__item(style="height: 200px; width: 18%; border: 1px solid #693;text-align:center;display:inline-block;")
     .services__pic(style= 'background-image:url(assets/img/' + bgImg + '.jpg); background-size: contain; background-repeat: no-repeat; background-position: center; height: 100%; width: 100%;')
     .services__icon
     h3.services__title #{itemTitle}
@@ -21,12 +21,16 @@ block content
     //begin content
     section.main
       .container
-        .test-mixins(style="display:flex; justify-content: space-between; margin-bottom: 50px;")
+        .test-mixins(style="display:flex; justify-content: space-between; margin-bottom: 100px;")
           +test__item('social', 'hello world 1')
           +test__item('social', 'hello world 2')
           +test__item('social', 'hello world 3')
+          +svg('close')
 
-        +svg('close')
+        .img-wrap(style="display:flex; justify-content: space-around; margin-bottom: 50px;")
+          img(src="assets/img/demo.jpg" alt="demo" style="width:25%;")
+          img(src="assets/img/demo.jpg" alt="" style="width:25%;")
+          img(src="assets/img/demo.jpg" style="width:25%;")
 
         h1 Заголовок 1
         h2 Заголовок 2
