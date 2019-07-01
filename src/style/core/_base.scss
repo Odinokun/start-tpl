@@ -136,16 +136,18 @@ svg {
   overflow: visible;
 }
 
-// подсвечиваем картинки без заполненного alt
+// подсвечиваем картинки без alt и без заполненного alt
 img[alt=''],
-img[alt=""]{
-  outline: 5px solid darkorange;
+img:not([alt]) {
+  outline: 5px solid tomato;
 }
 
-// подсвечиваем теги без необходимых атрибутов
-img:not([alt]),
-input[type=submit]:not([value]) {
-  outline: 5px solid tomato;
+// исключение для google-map и fancybox
+.fancybox-container img[alt=''],
+.fancybox-container img:not([alt]),
+.gm-style img[alt=''],
+.gm-style img:not([alt]) {
+  outline: none !important;
 }
 
 // тревога, если первый child внутри списка не li и прочие похожие примеры
@@ -166,6 +168,7 @@ ol > *:not(li) {
   flex-direction: column;
   height: 100%;
   min-height: 100vh;
+
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
@@ -188,6 +191,7 @@ ol > *:not(li) {
   @include max(768) {
     padding: 10px 20px;
   }
+
   @include max(425) {
     padding: 10px;
   }
