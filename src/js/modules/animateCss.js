@@ -1,22 +1,13 @@
 module.exports = function() {
 
   // begin Animate CSS + WayPoints javaScript Plugin
+  //РАБОТАЕТ ТОЛЬКО С JQUERY < 3.0.0 !!!!!!!!!!!!!!!!!!
 
-  //Author URL: http://webdesign-master.ru
-  (function($) {
-    $.fn.animated = function(inEffect) {
-      $(this).css("opacity", "0").addClass("animated").waypoint(function(dir) {
-        if (dir === "down") {
-            $(this).addClass(inEffect).css("opacity", "1");
-        };
-      }, {
-        offset: "100%"
-      });
-    };
-  })(jQuery);
-
-  //animate effect
-  $(".section__item").animated("zoomIn", "fadeOut");
+  $(".services__item").waypoint(function() {
+    $(this).addClass("animated zoomInUp");
+  }, {
+    offset: "100%"
+  });
 
   // end Animate CSS + WayPoints javaScript Plugin
 
