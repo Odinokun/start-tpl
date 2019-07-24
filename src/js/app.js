@@ -19,6 +19,7 @@ $(function() {
   // require('./modules/stickyHeader')();
 
   // begin Animate.css
+  //РАБОТАЕТ ТОЛЬКО С JQUERY < 3.0.0 !!!!!!!!!!!!!!!!!!
   // require('./modules/waypoints')();
   // require('./modules/animateCss')();
 
