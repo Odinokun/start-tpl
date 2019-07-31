@@ -1,7 +1,10 @@
 'use strict';
 
 module.exports = [
-  './node_modules/normalize.css/normalize.css',
+  './node_modules/normalize.css/normalize.css'
+
+  // include jQuery UI
+  // './src/vendors/jquery-ui/jquery-ui.min.js',
 
   // include Slick slider
   // './node_modules/slick-carousel/slick/slick.css',
