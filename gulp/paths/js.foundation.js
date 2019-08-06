@@ -7,6 +7,9 @@ module.exports = [
   // include jQuery UI
   // './src/vendors/jquery-ui/jquery-ui.min.js',
 
+  // include Maskedinput
+  // './src/vendors/maskedinput/jquery.maskedinput.min.js',
+
   // include Slick slider
   // './node_modules/slick-carousel/slick/slick.min.js',
 
