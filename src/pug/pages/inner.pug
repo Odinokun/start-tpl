@@ -19,7 +19,7 @@ block content
     include ../sections/header
 
     //begin content
-    section.main
+    main.main
       .container
         .test-mixins(style="display:flex; justify-content: space-between; margin-bottom: 100px;")
           +test__item('social', 'hello world 1', 'class1')
@@ -59,3 +59,4 @@ block content
     //end content
 
     include ../sections/footer
+    include ../sections/scripts
