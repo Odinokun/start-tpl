@@ -53,7 +53,7 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "animate.css": "^3.7.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "normalize.css": "^7.0.0",
     "slick-carousel": "^1.8.1",
     "svg4everybody": "^2.1.9",
