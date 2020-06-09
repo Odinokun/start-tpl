@@ -168,7 +168,10 @@ ol > *:not(li) {
   flex-direction: column;
   height: 100%;
   min-height: 100vh;
-
+  //свойство для исправления бага 100vh для мобильных
+  min-height: -moz-available;
+  min-height: -webkit-fill-available;
+  min-height:         fill-available;
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
@@ -191,7 +194,6 @@ ol > *:not(li) {
   @include max(768) {
     padding: 10px 20px;
   }
-
   @include max(425) {
     padding: 10px;
   }
