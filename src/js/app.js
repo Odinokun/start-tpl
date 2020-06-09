@@ -26,7 +26,4 @@ $(function() {
   // require('./modules/waypoints')();
   // require('./modules/animateCss')();
 
-  // begin Fancybox3
-  // require('./modules/fancybox')();
-
 });

@@ -1,3 +1,20 @@
+// скрываем все слайды кроме первого
+// при отключенном JS
+// .slick-slide исправить на текущий класс
+.no-js .slick-slide:not(:first-child) {
+  display: none;
+}
+
+// скрываем слайдер до его инициализации
+// .card-slider-lg__list исправить на текущий класс
+.card-slider-lg__list {
+  visibility: hidden;
+}
+
+.card-slider-lg__list.slick-initialized {
+  visibility: visible;
+}
+
 /* Slider */
 .slick-loading .slick-list {
   background: #fff url('../img/slick/slick-ajax-loader.gif') center center no-repeat;

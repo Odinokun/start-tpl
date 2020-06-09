@@ -1,20 +1,15 @@
 // ***** main colors *******
 $brand: #00407a;
-$dark: #181a19;
-$light: #f5f5f5;
-
-$highlight: #f6882b;
-$highlight-hov: #f2a621;
+$highlight: #D83612;
+$highlight-hov: darken($highlight, 5%);
 
 // ***** text colors *******
-$text: #646464;
-$title: #141414;
+$text: #181a19;
+
+// ***** link colors *******
+$link: lighten($brand, 10%);
+$link-hov: lighten($link, 25%);
 
 // ===== fonts =====
-$font:            'OpenSans', sans-serif;
-$font-bold:       'OpenSans-Bold', sans-serif;
-$font-light:      'OpenSans-Light', sans-serif;
-$font-semibold:   'OpenSans-Semibold', sans-serif;
-
-// ===== sizes =====
-$radius-btn: 6px;
+$font:      'OpenSans', sans-serif;
+$font-bold: 'OpenSans-Bold', sans-serif;

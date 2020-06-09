@@ -29,44 +29,14 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p {
+h6 {
+  font-family: $font-bold;
   font-weight: 400;
   margin: 0 0 10px 0;
 }
 
-h1 {
-  font-family: $font-bold;
-  font-size: 36px;
-}
-
-h2 {
-  font-family: $font-bold;
-  font-size: 32px;
-}
-
-h3 {
-  font-family: $font-bold;
-  font-size: 28px;
-}
-
-h4 {
-  font-family: $font-bold;
-  font-size: 24px;
-}
-
-h5 {
-  font-family: $font-bold;
-  font-size: 22px;
-}
-
-h6 {
-  font-family: $font-bold;
-  font-size: 20px;
-}
-
 p {
-  font-size: 16px;
+  margin: 0 0 10px 0;
   strong {
     font-family: $font-bold;
   }
@@ -74,17 +44,17 @@ p {
 
 a {
   transition: color .5s;
-  color: $highlight;
+  text-decoration: none;
+  color: $link;
   &:hover {
-    text-decoration: none;
-    color: $highlight-hov;
+    color: $link-hov;
   }
 }
 
 ol,
 ul {
   li {
-    padding: 3px 0;
+    padding: 0;
   }
 }
 
@@ -166,12 +136,11 @@ ol > *:not(li) {
 .main-wrap {
   display: flex;
   flex-direction: column;
-  height: 100%;
   min-height: 100vh;
   //свойство для исправления бага 100vh для мобильных
   min-height: -moz-available;
   min-height: -webkit-fill-available;
-  min-height:         fill-available;
+  min-height: fill-available;
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
@@ -189,29 +158,28 @@ ol > *:not(li) {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 15px 30px;
+  padding: 0 30px;
+}
 
-  @include max(768) {
-    padding: 10px 20px;
+.btn {
+  font-family: 'OpenSans', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+  display: inline-block;
+  padding: 10px 40px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color .5s;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  border-radius: 5px !important;
+  background-color: $highlight;
+  box-shadow: none;
+  &:hover {
+    color: #fff;
+    background-color: $highlight-hov;
   }
-  @include max(425) {
-    padding: 10px;
-  }
-}
-
-// скрываем все слайды кроме первого
-// при отключенном JS
-// .slick-slide исправить на текущий класс
-.no-js .slick-slide:not(:first-child) {
-  display: none;
-}
-
-// скрываем слайдер до его инициализации
-// .card-slider-lg__list исправить на текущий класс
-.card-slider-lg__list {
-  visibility: hidden;
-}
-
-.card-slider-lg__list.slick-initialized {
-  visibility: visible;
 }
