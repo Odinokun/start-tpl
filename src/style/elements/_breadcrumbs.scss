@@ -9,9 +9,10 @@
   position: relative;
   list-style: none;
   &::after {
-    font-size: 12px;
+    font-size: 14px;
     margin: 0 3px 0 4px;
     content: '/';
+    color: $text;
   }
   &:last-child {
     .breadcrumbs__link {
@@ -25,9 +26,9 @@
 }
 
 .breadcrumbs__link {
-  font-size: 12px;
+  font-size: 14px;
   white-space: nowrap;
-  color: #403549;
+  color: $text;
   &:hover {
     text-decoration: none;
   }

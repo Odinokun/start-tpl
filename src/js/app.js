@@ -6,6 +6,9 @@ $(function() {
   // begin no-JS
   require('./modules/noJs')();
 
+  // begin Sticky header
+  require('./modules/stickyHeader')();
+
   // begin phone mask
   // require('./modules/maskedinput')();
 
@@ -17,9 +20,6 @@ $(function() {
 
   // begin Popup
   // require('./modules/popup')();
-
-  // begin Sticky header
-  // require('./modules/stickyHeader')();
 
   // begin Animate.css
   //РАБОТАЕТ ТОЛЬКО С JQUERY < 3.0.0 !!!!!!!!!!!!!!!!!!

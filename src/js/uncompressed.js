@@ -1,7 +1,5 @@
-// BEGIN Меню для навигации при разработке
-//**************
+// BEGIN Temp navigation menu for development
 // should be commented before production
-//**************
 
 $(document).ready(function ($) {
   pageWidget([
@@ -25,7 +23,8 @@ function pageWidget(pages) {
   widgetStilization.prependTo(".widget_wrap");
 }
 
-// END Меню для навигации при разработке
+// END Temp navigation menu for development
+// should be commented before production
 
 
 //====== Begin Programmer code ======

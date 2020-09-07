@@ -1,18 +1,20 @@
 extends ../_template
 
-mixin test__item(bgImg, itemTitle, newclass)
-  .services__item(style="height: 200px; width: 18%; border: 1px solid #693;text-align:center;display:inline-block;")
-    .services__pic(style= 'background-image:url(assets/img/' + bgImg + '.jpg); background-size: contain; background-repeat: no-repeat; background-position: center; height: 100%; width: 100%;')
+mixin inner-mixin__item(bgImg, itemTitle, newclass)
+  //-.inner-mixin__item(style="height: 200px; width: 18%; border: 1px solid #693;text-align:center;display:inline-block;")
+  .inner-mixin__item
+    .inner-mixin__pic(style= 'background-image:url(assets/img/' + bgImg + '.jpg);')
     div(class='services__icon services__icon--' + newclass + '')
-    h3.services__title #{itemTitle}
-    a(href="#").services__link
+    h3.inner-mixin__title #{itemTitle}
 
 block variables
   - var title           = 'Inner'
+  - var description     = ''
+  - var ogtitle         = ''
+  - var ogimage         = ''
+
   - var pageHeaderTitle = 'Внутренняя страница'
-  - var description     = 'Odinokun`s start template'
-  - var ogtitle         = 'Odinokun`s start template'
-  - var ogimage         = 'assets/img/social.jpg'
+  - var breadcrumbs     = 'breadcrumbs link'
 
 block content
   .main-wrap.no-js.inner
@@ -21,41 +23,74 @@ block content
     //begin content
     main.main
       .container
-        .test-mixins(style="display:flex; justify-content: space-between; margin-bottom: 100px;")
-          +test__item('social', 'hello world 1', 'class1')
-          +test__item('social', 'hello world 2', 'class2')
-          +test__item('social', 'hello world 3', 'class3')
-          +svg('close')
+        br
+        include ../elements/breadcrumbs
+        //begin inner-video
+        .inner-video
+          .inner-video__item
+            iframe(width="560" height="315" src="https://www.youtube.com/embed/A7U527zhAvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+          .inner-video__item
+            iframe(width="560" height="315" src="https://www.youtube.com/embed/A7U527zhAvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+          .inner-video__item
+            iframe(width="560" height="315" src="https://www.youtube.com/embed/A7U527zhAvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+        //end inner-video
 
-        .img-wrap(style="display:flex; justify-content: space-around; margin-bottom: 50px;")
-          img(src="assets/img/demo.jpg" alt="demo" style="width:25%;")
-          img(src="assets/img/demo.jpg" alt="" style="width:25%;")
-          img(src="assets/img/demo.jpg" style="width:25%;")
+        //begin inner-mixin
+        .inner-mixin
+          +inner-mixin__item('social', 'hello world 1', 'class1')
+          +inner-mixin__item('social', 'hello world 2', 'class2')
+          +inner-mixin__item('social', 'hello world 3', 'class3')
+        //end inner-mixin
 
-        h1 Заголовок 1
-        h2 Заголовок 2
-        h3 Заголовок 3
-        h4 Заголовок 4
-        h5 Заголовок 5
-        h6 Заголовок 6
+        //begin inner-picture
+        .inner-picture
+          picture.inner-picture__item
+            source(srcset="assets/img/social.jpg" media="(min-width: 768px)")
+            source(srcset="assets/img/social.jpg")
+            img(src="assets/img/social.jpg" alt="pic")
+          picture.inner-picture__item
+            source(srcset="assets/img/social.jpg" media="(min-width: 768px)")
+            source(srcset="assets/img/social.jpg")
+            img(src="assets/img/social.jpg" alt="pic")
+          picture.inner-picture__item
+            source(srcset="assets/img/social.jpg" media="(min-width: 768px)")
+            source(srcset="assets/img/social.jpg")
+            img(src="assets/img/social.jpg" alt="pic")
+        //end inner-picture
 
-        p Повседневная практика показывает, что начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития. С другой стороны сложившаяся структура организации требуют от нас анализа направлений прогрессивного развития. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Равным образом укрепление и развитие структуры позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям.
-        p
-          | Равным образом дальнейшее развитие различных форм деятельности играет важную роль в
-          =" "
-          a(href="#") формировании форм развития. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности требуют определения
-          =" "
-          | прогрессивного развития. Товарищи! сложившаяся структура организации представляет собой интересный эксперимент проверки модели развития. Задача организации, в особенности же реализация намеченных плановых заданий позволяет оценить значение форм развития. Разнообразный и богатый опыт реализация намеченных плановых заданий в значительной степени обуславливает создание новых предложений.
+        //begin inner-texts
+        .inner-texts
+          h1 Заголовок 1
+          h2 Заголовок 2
+          h3 Заголовок 3
+          h4 Заголовок 4
+          h5 Заголовок 5
+          h6 Заголовок 6
+          p Повседневная практика показывает, что начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития. С другой стороны сложившаяся структура организации требуют от нас анализа направлений прогрессивного развития. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Равным образом укрепление и развитие структуры позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям.
+          p
+            | Равным образом дальнейшее развитие различных форм деятельности играет важную роль в
+            =" "
+            a(href="#") формировании форм развития. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности требуют определения
+            =" "
+            | прогрессивного развития. Товарищи! сложившаяся структура организации представляет собой интересный эксперимент проверки модели развития. Задача организации, в особенности же реализация намеченных плановых заданий позволяет оценить значение форм развития. Разнообразный и богатый опыт реализация намеченных плановых заданий в значительной степени обуславливает создание новых предложений.
+        //end inner-texts
 
-        ol
-          li Пункт 1
-          li Пункт 2
-          li Пункт 3
+        //begin inner-btns
+        .inner-btns
+          .inner-btn__item
+            a(href="#").inner-btn Отправить
+          .inner-btn__item
+            button.inner-btn Отправить
+          .inner-btn__item
+            input(type='submit' value='Отправить').inner-btn
+        //end inner-btns
 
-        ul
-          li Пункт 1
-          li Пункт 2
-          li Пункт 3
+        //begin inner-img-alert
+        .inner-img-alert
+          img(src="assets/img/social.jpg" alt="demo")
+          img(src="assets/img/social.jpg" alt="")
+          img(src="assets/img/social.jpg")
+        //end inner-img-alert
     //end content
 
     include ../sections/footer

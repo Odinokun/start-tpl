@@ -1,221 +1,59 @@
-.burger__menu {
-  font-family: $font, sans-serif;
-  font-size: 22px;
-  position: absolute;
-  top: 4px;
-  left: 50px;
-  letter-spacing: 1px;
-  color: #fafafa;
-}
+$burger-height: 17px;
+$burger-width: 24px;
+$burger-color: #fff;
+$burger-item: 3px;
+$burger-item-offset: $burger-height - $burger-item * 2;
+$burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 2;
 
 .burger {
   position: relative;
-  z-index: 25;
-  width: 31px;
-  height: 31px;
+  display: inline-flex;
 }
 
-.burger input {
-  display: none;
-}
-
-.burger label {
-  position: relative;
+.burger__input {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
   display: block;
-  width: 31px;
-  height: 31px;
+  width: $burger-width;
+  height: $burger-height;
   cursor: pointer;
-  background: transparent;
-}
+  opacity: 0;
 
-/* Exit Icon */
-.burger label:before,
-.burger input:checked + label:before {
-  position: absolute;
-  top: 50%;
-  width: 30px;
-  height: 2px;
-  margin-top: -1px;
-  content: '';
-  transition: background-color .5s;
-  border-radius: 2px;
-  background-color: $text;
-}
-
-.burger label:before {
-  animation: animationOneReverse 1s ease forwards;
-}
-
-@keyframes animationOneReverse {
-  0% {
-    transform: rotate(315deg);
+  &:checked + .burger__label::before {
+    transform: translateY($burger-height / 2 - $burger-item * .5) rotateZ(45deg);
   }
-  25% {
-    transform: rotate(360deg);
-  }
-  50%,
-  100% {
-    transform: rotate(0deg);
+
+  &:checked + .burger__label::after {
+    transform: translateY($burger-height / 2 - $burger-item * 1.5) rotateZ(-45deg);
+
+    filter: initial;
   }
 }
 
-.burger input:checked + label:before {
-  animation: animationOne 1s ease forwards;
-}
+.burger__label {
+  width: $burger-width;
+  height: $burger-height;
+  margin: auto;
+  cursor: pointer;
+  user-select: none;
+  color: $burger-color;
+  border-radius: $burger-item / 2;
 
-@keyframes animationOne {
-  0%,
-  50% {
-    transform: rotate(0deg);
+  &::before,
+  &::after {
+    display: block;
+    height: $burger-item;
+    content: '';
+    transition: .5s;
+    border-radius: inherit;
+    background: $burger-color;
   }
-  75% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(315deg);
-  }
-}
 
-.burger label:after,
-.burger input:checked + label:after {
-  position: absolute;
-  top: 50%;
-  width: 30px;
-  height: 2px;
-  margin-top: -1px;
-  content: '';
-  transition: background-color .5s;
-  border-radius: 2px;
-  background-color: $text;
-}
+  &::after {
+    transform: translateY($burger-item-offset);
 
-.burger label:after {
-  animation: animationTwoReverse 1s ease forwards;
-}
-
-@keyframes animationTwoReverse {
-  0% {
-    transform: rotate(405deg);
-  }
-  25% {
-    transform: rotate(450deg);
-  }
-  50%,
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.burger input:checked + label:after {
-  animation: animationTwo 1s ease forwards;
-}
-
-@keyframes animationTwo {
-  0%,
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(450deg);
-  }
-  100% {
-    transform: rotate(405deg);
-  }
-}
-
-/* Burger Icon */
-.burger label .burger__icon:before {
-  position: absolute;
-  top: 7px;
-  width: 30px;
-  height: 2px;
-  content: '';
-  transition: background-color .5s;
-  animation: animationBurgerTopReverse 1s ease forwards;
-  border-radius: 2px;
-  background-color: $text;
-}
-
-@keyframes animationBurgerTopReverse {
-  0%,
-  50% {
-    transform: translateY(12px);
-    opacity: 0;
-  }
-  51% {
-    transform: translateY(12px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
-.burger input:checked + label .burger__icon:before {
-  animation: animationBurgerTop 1s ease forwards;
-}
-
-@keyframes animationBurgerTop {
-  0% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(12px);
-    opacity: 1;
-  }
-  51%,
-  100% {
-    transform: translateY(12px);
-    opacity: 0;
-  }
-}
-
-.burger label .burger__icon:after {
-  position: absolute;
-  bottom: 6px;
-  width: 30px;
-  height: 2px;
-  content: '';
-  transition: background-color .5s;
-  animation: animationBurgerBottomReverse 1s ease forwards;
-  border-radius: 2px;
-  background-color: $text;
-}
-
-@keyframes animationBurgerBottomReverse {
-  0%,
-  50% {
-    transform: translateY(-12px);
-    opacity: 0;
-  }
-  51% {
-    transform: translateY(-12px);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
-.burger input:checked + label .burger__icon:after {
-  animation: animationBurgerBottom 1s ease forwards;
-}
-
-@keyframes animationBurgerBottom {
-  0% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(-12px);
-    opacity: 1;
-  }
-  51%,
-  100% {
-    transform: translateY(-12px);
-    opacity: 0;
+    filter: drop-shadow(0 $burger-item-shadow $burger-color);
   }
 }

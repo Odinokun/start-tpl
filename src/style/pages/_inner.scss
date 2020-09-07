@@ -1,0 +1,121 @@
+//begin #VIDEO
+.inner-video {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+  margin: 30px 0;
+}
+
+.inner-video__item {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 56.25%;
+  box-shadow: 5px 5px 25px rgba(0, 79, 110, .3);
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//end #VIDEO
+
+//begin #MIXIN
+.inner-mixin {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+  margin: 30px 0;
+}
+
+.inner-mixin__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner-mixin__pic {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 15px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+//end #MIXIN
+
+//begin #PICTURE
+.inner-picture {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+  margin: 30px 0;
+}
+
+.inner-picture__item {
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+//end #PICTURE
+
+//begin #BUTTONS
+.inner-btns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+  margin: 30px 0;
+}
+
+.inner-btn__item {
+  display: flex;
+  justify-content: center;
+}
+
+.inner-btn {
+  font-family: 'OpenSans', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color $transition-hover;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  border-radius: 50px !important;
+  background-color: darkgreen;
+  box-shadow: none;
+  &:hover {
+    color: #fff;
+    background-color: darken(darkgreen, 10%);
+  }
+}
+
+//end #BUTTONS
+
+//begin #ALERT
+.inner-img-alert {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+  margin: 30px 0;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+//end #ALERT

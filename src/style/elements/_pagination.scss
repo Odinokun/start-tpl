@@ -1,21 +1,22 @@
 .pagination {
   display: flex;
+  justify-content: center;
   padding: 10px 0;
   text-align: center;
-
-  justify-content: center;
 }
+
 .pagination__list {
   display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
-
-  align-items: center;
 }
+
 .pagination__item {
   margin: 0 5px;
   list-style: none;
 }
+
 .pagination__link {
   display: block;
   padding: 3px 6px;
@@ -38,6 +39,7 @@
     border: 1px solid #824b75;
   }
 }
+
 .pagination-arr__left,
 .pagination-arr__right {
   position: relative;
@@ -46,17 +48,17 @@
   }
   svg {
     display: block;
+    fill: #824b75;
     width: 20px;
     height: 20px;
     margin: auto;
     transition: fill .5s;
-
-    fill: #824b75;
     &:hover {
       fill: #501743;
     }
   }
 }
+
 .pagination-arr__left {
   transform: rotate(180deg);
 }

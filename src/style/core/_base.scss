@@ -35,6 +35,30 @@ h6 {
   margin: 0 0 10px 0;
 }
 
+h1 {
+  @include responsive-font(34, 24);
+}
+
+h2 {
+  @include responsive-font(30, 22);
+}
+
+h3 {
+  @include responsive-font(28, 20);
+}
+
+h4 {
+  @include responsive-font(26, 18);
+}
+
+h5 {
+  @include responsive-font(24, 17);
+}
+
+h6 {
+  @include responsive-font(20, 16);
+}
+
 p {
   margin: 0 0 10px 0;
   strong {
@@ -43,7 +67,7 @@ p {
 }
 
 a {
-  transition: color .5s;
+  transition: color $transition-hover;
   text-decoration: none;
   color: $link;
   &:hover {
@@ -86,9 +110,8 @@ input {
   padding: 3px 10px 5px 10px;
   color: $text;
   border: 1px solid $text;
-  &::placeholder {
-    @include placeholder-color($text);
-  }
+
+  @include placeholder-color($text);
 }
 
 textarea {
@@ -140,7 +163,7 @@ ol > *:not(li) {
   //свойство для исправления бага 100vh для мобильных
   min-height: -moz-available;
   min-height: -webkit-fill-available;
-  min-height: fill-available;
+  min-height:         fill-available;
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
@@ -159,27 +182,4 @@ ol > *:not(li) {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 30px;
-}
-
-.btn {
-  font-family: 'OpenSans', sans-serif;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 1;
-  display: inline-block;
-  padding: 10px 40px;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: background-color .5s;
-  white-space: nowrap;
-  text-decoration: none;
-  color: #fff;
-  border: none;
-  border-radius: 5px !important;
-  background-color: $highlight;
-  box-shadow: none;
-  &:hover {
-    color: #fff;
-    background-color: $highlight-hov;
-  }
 }

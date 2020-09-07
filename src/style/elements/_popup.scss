@@ -33,14 +33,14 @@
   width: 20px;
   height: 20px;
   cursor: pointer;
-  transition: transform .5s;
+  transition: transform $transition-hover;
 
   will-change: transform;
   &:hover {
     transform: rotate(360deg);
   }
   svg {
-    fill: $dark;
+    fill: #1e1e1e;
     width: 20px;
     height: 20px;
   }
