@@ -1,6 +1,5 @@
 module.exports = function() {
 
-  // begin scroll 2 anchor desktop menu
   $(function() {
     $('nav a[href*=\\#]').on("click", function(e){
        // e.preventDefault();
@@ -11,6 +10,5 @@ module.exports = function() {
     });
     return false;
   });
-  // end scroll 2 anchor desktop menu
 
 };

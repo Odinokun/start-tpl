@@ -3,7 +3,7 @@ extends ../_template
 mixin inner-mixin__item(bgImg, itemTitle, newclass)
   //-.inner-mixin__item(style="height: 200px; width: 18%; border: 1px solid #693;text-align:center;display:inline-block;")
   .inner-mixin__item
-    .inner-mixin__pic(style= 'background-image:url(assets/img/' + bgImg + '.jpg);')
+    .inner-mixin__pic(style= 'background-image:url(assets/img/' + bgImg + '.png);')
     div(class='services__icon services__icon--' + newclass + '')
     h3.inner-mixin__title #{itemTitle}
 
@@ -11,7 +11,6 @@ block variables
   - let title           = 'Inner'
   - let description     = ''
 
-  - let pageHeaderTitle = 'Внутренняя страница'
   - let breadcrumbs     = 'breadcrumbs link'
 
 block content
@@ -34,24 +33,24 @@ block content
 
         //begin inner-mixin
         .inner-mixin
-          +inner-mixin__item('social', 'hello world 1', 'class1')
-          +inner-mixin__item('social', 'hello world 2', 'class2')
-          +inner-mixin__item('social', 'hello world 3', 'class3')
+          +inner-mixin__item('favicon', 'hello world 1', 'class1')
+          +inner-mixin__item('favicon', 'hello world 2', 'class2')
+          +inner-mixin__item('favicon', 'hello world 3', 'class3')
         //end inner-mixin
 
         //begin inner-picture
         .inner-picture
           picture.inner-picture__item
-            source(srcset="assets/img/social.jpg" media="(min-width: 768px)")
-            source(srcset="assets/img/social.jpg")
-            img(src="assets/img/social.jpg" alt="pic")
+            source(srcset="assets/img/favicon.png" media="(min-width: 768px)")
+            source(srcset="assets/img/favicon.png")
+            img(src="assets/img/favicon.png" alt="pic")
           picture.inner-picture__item
-            source(srcset="assets/img/social.jpg" media="(min-width: 768px)")
-            source(srcset="assets/img/social.jpg")
-            img(src="assets/img/social.jpg" alt="pic")
+            source(srcset="assets/img/favicon.png" media="(min-width: 768px)")
+            source(srcset="assets/img/favicon.png")
+            img(src="assets/img/favicon.png" alt="pic")
           picture.inner-picture__item
-            source(srcset="assets/img/social.jpg" media="(min-width: 768px)")
-            source(srcset="assets/img/social.jpg")
+            source(srcset="assets/img/favicon.png" media="(min-width: 768px)")
+            source(srcset="assets/img/favicon.png")
             img(src="assets/img/social.jpg" alt="pic")
         //end inner-picture
 
@@ -81,13 +80,6 @@ block content
           .inner-btn__item
             input(type='submit' value='Отправить').inner-btn
         //end inner-btns
-
-        //begin inner-img-alert
-        .inner-img-alert
-          img(src="assets/img/social.jpg" alt="demo")
-          img(src="assets/img/social.jpg" alt="")
-          img(src="assets/img/social.jpg")
-        //end inner-img-alert
     //end content
 
     include ../sections/footer

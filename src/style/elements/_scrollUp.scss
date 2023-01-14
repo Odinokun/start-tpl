@@ -1,0 +1,52 @@
+/* begin scrollUp */
+.scrollUp {
+  position: fixed;
+  z-index: 10;
+  right: 40px;
+  bottom: 40px;
+  visibility: hidden;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: .2s;
+  transform: translateY(25px);
+  pointer-events: none;
+  opacity: 0;
+  color: #bebebe;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 3px #bebebe;
+
+  &:hover {
+    color: orange;
+  }
+
+  &::before {
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    content: '↑';
+  }
+}
+
+.scrollUp--active {
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.scrollUp__path {
+  fill: none;
+  transition: .2s;
+
+  stroke: orange;
+  stroke-width: 3px;
+}
+
+/* end   scrollUp */

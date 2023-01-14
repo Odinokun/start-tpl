@@ -4,7 +4,6 @@ block variables
   - let title       = 'Index'
   - let description = ''
 
-  - let pageHeaderTitle = ''
   - let breadcrumbs     = 'breadcrumbs link'
 
 block content
@@ -12,8 +11,9 @@ block content
     include ../sections/header
 
     //begin content
-    main.main.index
+    main.main
     //end content
 
+    //-include ../elements/scrollUp
     include ../sections/footer
     include ../sections/scripts
