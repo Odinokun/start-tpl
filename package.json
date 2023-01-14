@@ -52,10 +52,9 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
-    "animate.css": "^3.7.2",
     "jquery": "^3.4.1",
     "normalize.css": "^7.0.0",
     "svg4everybody": "^2.1.9",
-    "waypoints": "^4.0.1"
+    "swiper": "^8.4.5"
   }
 }
