@@ -2,28 +2,19 @@ include elements/_mixins
 block variables
 
 doctype html
-html(lang="ru")
+html(lang="en")
   head
     meta(charset="utf-8")
     title #{title}
 
     meta(name="description" content= description)
-    meta(name="author"      content="http://odinokun.com/")
 
     // begin responsive
     meta(name="viewport"              content="width=device-width, initial-scale=1")
     meta(http-equiv="x-ua-compatible" content="ie=edge")
     // end responsive
 
-    // begin social content&image
-    meta(property='og:title'  content= ogtitle)
-    meta(property="og:image"  content= ogimage)
-    // end social content&image
-
-    // begin favicon block start
-    link(rel='shortcut icon'    type='image/x-icon' href='assets/img/favicon/favicon.jpg')
-    link(rel='apple-touch-icon' sizes='180x180'     href='img/favicon/apple-touch-icon-180x180.jpg')
-    // end favicon block end
+    link(rel='shortcut icon'    type='image/x-icon' href='assets/img/favicon.png')
 
     link(rel='stylesheet' href='assets/css/foundation.css')
     link(rel='stylesheet' href='assets/css/app.css')

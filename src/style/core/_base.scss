@@ -15,7 +15,7 @@ html {
   font-family: $font;
   font-size: 16px;
   line-height: 1.38;
-  color: $text;
+  color: #141414;
 }
 
 body {
@@ -29,50 +29,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: $font-bold;
+h6,p {
   font-weight: 400;
   margin: 0 0 10px 0;
-}
-
-h1 {
-  @include responsive-font(34, 24);
-}
-
-h2 {
-  @include responsive-font(30, 22);
-}
-
-h3 {
-  @include responsive-font(28, 20);
-}
-
-h4 {
-  @include responsive-font(26, 18);
-}
-
-h5 {
-  @include responsive-font(24, 17);
-}
-
-h6 {
-  @include responsive-font(20, 16);
-}
-
-p {
-  margin: 0 0 10px 0;
-  strong {
-    font-family: $font-bold;
-  }
-}
-
-a {
-  transition: color $transition-hover;
-  text-decoration: none;
-  color: $link;
-  &:hover {
-    color: $link-hov;
-  }
 }
 
 ol,
@@ -106,47 +65,13 @@ button {
   outline: none;
 }
 
-input {
-  padding: 3px 10px 5px 10px;
-  color: $text;
-  border: 1px solid $text;
-
-  @include placeholder-color($text);
-}
-
 textarea {
   resize: none;
-}
-
-input.error,
-textarea.error {
-  border-color: #ed1b24 !important;
-  background: #fbd1d3 !important;
 }
 
 svg {
   display: block;
   overflow: visible;
-}
-
-// подсвечиваем картинки без alt и без заполненного alt
-img[alt=''],
-img:not([alt]) {
-  outline: 5px solid tomato;
-}
-
-// исключение для google-map и fancybox
-.fancybox-container img[alt=''],
-.fancybox-container img:not([alt]),
-.gm-style img[alt=''],
-.gm-style img:not([alt]) {
-  outline: none !important;
-}
-
-// тревога, если первый child внутри списка не li и прочие похожие примеры
-ul > *:not(li),
-ol > *:not(li) {
-  outline: 5px solid tomato;
 }
 
 //изменяем цвет выделения текста мышью
@@ -167,9 +92,6 @@ ol > *:not(li) {
   //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
-  &.no-scroll {
-    overflow: hidden;
-  }
 }
 
 .main {

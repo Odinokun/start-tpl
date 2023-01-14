@@ -8,13 +8,11 @@ mixin inner-mixin__item(bgImg, itemTitle, newclass)
     h3.inner-mixin__title #{itemTitle}
 
 block variables
-  - var title           = 'Inner'
-  - var description     = ''
-  - var ogtitle         = ''
-  - var ogimage         = ''
+  - let title           = 'Inner'
+  - let description     = ''
 
-  - var pageHeaderTitle = 'Внутренняя страница'
-  - var breadcrumbs     = 'breadcrumbs link'
+  - let pageHeaderTitle = 'Внутренняя страница'
+  - let breadcrumbs     = 'breadcrumbs link'
 
 block content
   .main-wrap.no-js.inner
@@ -24,7 +22,6 @@ block content
     main.main
       .container
         br
-        include ../elements/breadcrumbs
         //begin inner-video
         .inner-video
           .inner-video__item
