@@ -1,6 +1,6 @@
-﻿# Front-end startup template
+﻿# Front-end layouts start template
 
-Author: <a href="http://odinokun.com" target="_blank">Odinokun</a>
+Author: <a href="https://odinokun.com" target="_blank">Odinokun</a>
 
 ## Technologies:
 * Gulp 4.0
@@ -9,11 +9,11 @@ Author: <a href="http://odinokun.com" target="_blank">Odinokun</a>
 * JS+jQuery
 
 ## How to use:
-1. install node.js(8.9.4)
+1. install node.js
 2. clone this repo
 3. cd path/to/this repository
 4. npm i gulpjs/gulp-cli -g  // Install the latest Gulp CLI tools globally
-5. npm i
+5. npm install
 6. run "gulp" command to start
 
 ## Structure:
@@ -22,18 +22,18 @@ Author: <a href="http://odinokun.com" target="_blank">Odinokun</a>
 * js
 * php
 * pug
-    * elements (мелкие элементы, например кнопки или пагинация)
-    * sections (крупные элементы, например header, footer, секции главной страницы)
+    * elements (buttons, pagination, etc)
+    * sections (header, footer, main page sections, etc.)
     * pages
 * sprite
 * style
-  * core (базовые стили)
+  * core (base styles)
     * fonts
     * variables
     * mixins
     * base
-  * elements (мелкие элементы, например кнопки или пагинация)
-  * pages (стили для страниц сайта)
-  * sections (крупные элементы, например header, footer и секции главной страницы)
-* vendors (сюда заливаем все чего нет в NPM и подключаем эти в файлы foundation)
+  * elements
+  * pages
+  * sections
+* vendors (custom scripts, styles, etc. - NOT npm scripts - and includes in foundation.js and foundation.css)
 * video
