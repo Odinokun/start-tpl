@@ -34,17 +34,16 @@
     "gulp-concat-css": "^3.1.0",
     "gulp-csso": "^3.0.1",
     "gulp-eslint": "^5.0.0",
-    "gulp-imagemin": "^6.2.0",
     "gulp-load-plugins": "^1.6.0",
     "gulp-newer": "^1.4.0",
     "gulp-notify": "^3.2.0",
-    "gulp-pngquant": "^1.0.12",
     "gulp-prettify": "^0.5.0",
     "gulp-pug": "^4.0.1",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^5.1.0",
+    "gulp-sharp-optimize-images": "^4.0.3",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svg-sprite": "^2.0.3",
     "gulp-svgmin": "^2.2.0",
     "gulp-uglify-es": "^1.0.4",
     "sass": "^1.59.2",
@@ -57,5 +56,8 @@
     "normalize.css": "^7.0.0",
     "svg4everybody": "^2.1.9",
     "swiper": "^8.4.5"
+  },
+  "engines": {
+    "node": ">=22.12"
   }
 }
