@@ -16,6 +16,7 @@ global.$ = {
   buffer:       require('vinyl-buffer'),
   sourceStream: require('vinyl-source-stream'),
   uglifyEs:     require('gulp-uglify-es').default,
+  sharpOptimizeImages: require('gulp-sharp-optimize-images').default,
   gp:           require('gulp-load-plugins')()
 };
 
