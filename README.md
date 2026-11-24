@@ -1,22 +1,23 @@
-﻿# Front-end layouts start template
+# Front-end starter template
 
-Author: <a href="https://odinokun.com" target="_blank">Odinokun</a>
+Starter template I use for static website markup: Pug templates, SCSS, vanilla JS or jQuery, built with Gulp 4.
 
-## Technologies:
-* Gulp 4.0
-* Pug(Jade)
-* Sass(Scss)
-* JS+jQuery
+## What it does
+- Pug pages from shared sections and elements
+- SCSS split into core, elements, sections and pages, with Autoprefixer, CSSO minification and sourcemaps
+- JS bundled with Browserify, minified, checked with ESLint
+- SVG sprite built from separate icons
+- Image optimization (imagemin, pngquant)
+- BrowserSync dev server with live reload
+- Swiper, Fancybox and normalize.css included
 
-## How to use:
-1. install node.js
-2. clone this repo
-3. cd path/to/this repository
-4. npm i gulpjs/gulp-cli -g  // Install the latest Gulp CLI tools globally
-5. npm install
-6. run "gulp" command to start
+## Getting started
+```bash
+npm install
+npx gulp
+```
 
-## Structure:
+## Structure
 * fonts
 * img
 * js
